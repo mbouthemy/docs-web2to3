@@ -4,13 +4,18 @@ sidebar_position: 1
 
 # Tutorial Intro
 
-Let's discover **Docusaurus in less than 5 minutes**.
-
+Web2To3 is an API which allows you to transform any web games into a play2earn game integrated with Solana blockchain.
 ## Getting Started
 
-Get started by **creating a new site**.
+Get started by **creating a new account** to get your API key.
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+Go to  **[Web2To3/signup](https://www.web-2-to-3.com/signup)** and create a new account.
+
+Once your new account is created, copy your API_KEY:
+
+```md
+![API KEY Example](/img/api_key_web2to3.png)
+```
 
 ### What you'll need
 
