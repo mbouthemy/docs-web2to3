@@ -1,0 +1,66 @@
+---
+sidebar_position: 2
+---
+
+# 2. Installing the package
+
+Install the play2earn react package to integrate with your Nextjs website.
+
+```bash
+npm install play2earn 
+```
+
+The command also installs all necessary dependencies you need to run Web2To3 (i.e solana, solana-wallets).
+
+
+Once it is installed, you need to add the following variable to your `.env` file:
+
+
+```bash
+BACKEND_ENDPOINT=https://web2to3.herokuapp.com
+NEXT_PUBLIC_WEBSITE_HOST=YOUR_DOMAIN_NAME
+API_KEY=YOUR_API8KEY
+```
+
+Where YOUR_DOMAIN_NAME is the domain name that you defined when adding the game in the website.
+
+Then you can integrate the Play2Earn modal to your game, before the launching game screen.
+
+```js
+import { Play2EarnModal, finishGameAndGetMoneyWebThree } from "play2earn";
+```
+
+```js
+<Play2EarnModal gameWebsiteHost={process.env.NEXT_PUBLIC_WEBSITE_HOST} 
+                gameID={gameID}
+                playerUID={user?.uid} 
+                handleGameStarting={() => handleGameStarting()}
+                secondsBeforeCancellation={60} />
+```
+
+You also need to add the function which is triggers when the game is starting (i.e after the one/two players have bet in case of 
+solo/multiplayer game).
+
+```js
+async function handleGameStarting() {
+    console.log('Updating when the second player has accepted the bet.');
+    // WRITE_YOUR_LOGIC_HERE...
+}
+```
+
+Then, you need to add the function to end the game when one player has won.
+
+```js
+// Call this function when the game is finished with the winnerID
+finishGameAndGetMoneyWebThree(process.env.NEXT_PUBLIC_WEBSITE_HOST, gameID, winnerID, winnerID, false)
+    .then(resultSignature => {
+        console.log('The money has been transferred to your account, the signature is: ', resultSignature);
+    });
+}
+```
+
+
+
+
+
+

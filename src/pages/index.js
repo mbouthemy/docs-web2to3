@@ -4,6 +4,6 @@ import {Redirect} from '@docusaurus/router';
 
 export default function Home() {
   return (
-      <Redirect to="/docs/intro" />
+      <Redirect to="/docs/play2earn-game/getting-api-key" />
     )
 }

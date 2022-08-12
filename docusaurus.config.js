@@ -46,7 +46,7 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'intro',
+            docId: 'play2earn-game/getting-api-key',
             position: 'left',
             label: 'Tutorial',
           },
@@ -65,7 +65,7 @@ const config = {
             items: [
               {
                 label: 'Tutorial',
-                to: '/docs/intro',
+                to: '/docs/play2earn-game/getting-api-key',
               },
             ],
           },
